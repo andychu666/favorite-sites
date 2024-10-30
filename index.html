@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Sites</title>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            /* --card-bg: #f5f5f5; */
+            --shadow: 0 2px 5px rgba(0,0,0,0.1);
+            --card-hover-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        nav {
+            position: sticky;
+            padding: 1rem;
+        }
+
+        .search-box {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            width: 300px;
+            font-size: 1rem;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        main {
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+ 
+        .section-header {
+            margin-bottom: 0.3rem;
+            padding: 0.2rem 0;
+        }
+
+        .section-header h2 {
+            margin: 0;
+            border-radius: 8px;
+            text-align: center;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .link-card {
+            text-decoration: underline;
+            transition: transform 0.3s;
+            min-width: 50px;
+        }
+
+        article p {
+            display: none;
+        }
+
+        .return-to-top {
+            color: #fff;
+            background-color: var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .return-to-top:hover {
+            background-color: #357abd;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            flex: 0 1 300px;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: var(--shadow);
+        }
+
+        .section-header {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 0.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 0.9rem;
+            background-color: var(--primary-color);
+            color: white;
+            width: 100%;
+        }
+
+        .links-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        article {
+            background-color: white;
+            border-radius: 4px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        } 
+
+        article:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        article h3 {
+            font-size: 0.75rem;
+            margin: 0;
+            line-height: 1.5;
+            text-align: center;
+            width: 100%;
+            padding: 0.2rem;
+        }
+
+        @media (max-width: 480px) {
+            main {
+                flex-direction: column;
+            }
+            section {
+                flex: 1 1 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <input type="text" class="search-box" placeholder="搜尋網站...">
+        </div>
+    </nav>
+    <main>
+
+        <section id="manga">
+            <div class="section-header">
+                <h2>漫畫</h2>
+                <div class="links-grid">
+                    <a href="http://www.dm5.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>動漫屋</h3>
+                            <p>提供豐富漫畫資源的線上閱讀平台</p>
+                        </article>
+                    </a>
+                    <a href="https://www.baozimh.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>包子漫畫</h3>
+                            <p>免費漫畫閱讀網站，更新速度快</p>
+                        </article>
+                    </a>
+                    <a href="https://www.manhuagui.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Manhuagui</h3>
+                            <p>提供多語言漫畫的在線閱讀平台</p>
+                        </article>
+                    </a>
+                    <a href="https://m.happymh.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>二次元</h3>
+                            <p>動漫迷專屬的漫畫閱讀網站</p>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="anime">
+            <div class="section-header">
+                <h2>動畫</h2>
+                <div class="links-grid">
+                    <a href="https://ani.gamer.com.tw" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>巴哈動畫</h3>
+                            <p>巴哈姆特提供的正版動畫串服務</p>
+                        </article>
+                    </a>
+                    <a href="https://gimy.app" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Gimy劇迷</h3>
+                            <p>提供動畫和劇的線上觀看平台</p>
+                        </article>
+                    </a>
+                    <a href="https://pttplay.cc/type/4.html" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Pttplay</h3>
+                            <p>提供多元影視內容的觀平台</p>
+                        </article>
+                    </a>
+                    <a href="https://anime1.me" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Anime1</h3>
+                            <p>專注於動畫更新的線上觀看網站</p>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="portal">
+            <div class="section-header">
+                <h2>入口網站</h2>
+                <div class="links-grid">
+                    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Google</h3>
+                            <p>全球最大的搜尋引擎，提供網頁、圖片、新聞等多元搜尋服務</p>
+                        </article>
+                    </a>
+                    <a href="https://tw.yahoo.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Yahoo</h3>
+                            <p>提供新聞、購物、信箱等綜合性服務的入口網站</p>
+                        </article>
+                    </a>
+                    <a href="https://yandex.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Yandex</h3>
+                            <p>俄羅斯最大的搜尋引擎，提供多語言搜尋服務</p>
+                        </article>
+                    </a>
+                    <a href="https://www.bing.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Bing</h3>
+                            <p>微軟開發的搜尋引擎，提供優質的圖片和視頻搜尋</p>
+                        </article>
+                    </a>
+                    <a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Baidu百度</h3>
+                            <p>中國最大的搜尋引擎，提供中文搜尋服務</p>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="social">
+            <div class="section-header">
+                <h2>社群網路</h2>
+                <div class="links-grid">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Facebook</h3>
+                            <p>全球最大的社交平台，連接朋友和家人</p>
+                        </article>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Twitter</h3>
+                            <p>即時資訊分享平台，關注新聞和話題討論</p>
+                        </article>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Instagram</h3>
+                            <p>圖片和短影片分享平台，分享生活點滴</p>
+                        </article>
+                    </a>
+                    <a href="https://www.redditinc.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Reddit</h3>
+                            <p>社群討論平台，各種主題的討論區集合</p>
+                        </article>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>LinkedIn</h3>
+                            <p>專業人士社交網路，職業發展和求職平台</p>
+                        </article>
+                    </a>
+                    <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Discord</h3>
+                            <p>即時通訊和社群平台，支援語音和視訊</p>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="games">
+            <div class="section-header">
+                <h2>遊戲</h2>
+                <div class="links-grid">
+                    <a href="https://web.poe.garena.tw/garena-page/download" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Garena</h3>
+                            <p>知名遊戲平台，提供多款熱門遊戲</p>
+                        </article>
+                    </a>
+                    <a href="https://store.steampowered.com/?l=tchinese" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Steam</h3>
+                            <p>全球最大電腦遊戲發行平台</p>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="google">
+            <div class="section-header">
+                <h2>Google服務</h2>
+                <div class="links-grid">
+                    <a href="https://translate.google.com.tw/?hl=zh-TW" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Google翻譯</h3>
+                            <p>支援多國語言翻譯的免費工具</p>
+                        </article>
+                    </a>
+                    <a href="https://drive.google.com/drive/home" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Google雲端</h3>
+                            <p>線上檔案儲存和協作平台</p>
+                        </article>
+                    </a>
+                    <a href="https://mail.google.com/mail/u/0" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Gmail</h3>
+                            <p>Google提供的免費電子郵件服務</p>
+                        </article>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>YouTube</h3>
+                            <p>全球最大的影片分享平台</p>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="us-stocks">
+            <div class="section-header">
+                <h2>美股</h2>
+                <div class="links-grid">
+                    <a href="https://www.firstrade.com/zh-TW" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Firstrade</h3>
+                            <p>提供美股交易服務的券商平台</p>
+                        </article>
+                    </a>
+                    <a href="https://seekingalpha.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Seeking Alpha</h3>
+                            <p>美股投資研究和分析平台</p>
+                        </article>
+                    </a>
+                    <a href="https://www.moneydj.com/us/tool/tool0004" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>MoneyDJ</h3>
+                            <p>提供美股市場資訊和分析工具</p>
+                        </article>
+                    </a>
+                    <a href="https://www.morningstar.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Morningstar</h3>
+                            <p>投資研究和基金評級機構</p>
+                        </article>
+                    </a>
+                    <a href="https://finviz.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Finviz</h3>
+                            <p>股票篩選和術分析工具</p>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="tw-stocks">
+            <div class="section-header">
+                <h2>台股</h2>
+                <div class="links-grid">
+                    <a href="https://goodinfo.tw/tw/index.asp" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Goodinfo</h3>
+                            <p>台股資訊和分析的專業平台</p>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="shopping">
+            <div class="section-header">
+                <h2>購物</h2>
+                <div class="links-grid">
+                    <a href="https://www.amazon.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Amazon</h3>
+                            <p>全球最大的電商平台，商品種類齊全</p>
+                        </article>
+                    </a>
+                    <a href="https://www.ebay.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>eBay</h3>
+                            <p>全球知名拍賣網站，二手商品交易平台</p>
+                        </article>
+                    </a>
+                    <a href="https://shopee.tw" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>蝦皮</h3>
+                            <p>台灣熱門購物平台，提供多元商品和優惠</p>
+                        </article>
+                    </a>
+                    <a href="https://shopping.pchome.com.tw" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>PChome</h3>
+                            <p>台灣知名電商，24小時快速到貨服務</p>
+                        </article>
+                    </a>
+                    <a href="https://www.ruten.com.tw" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>露天</h3>
+                            <p>台灣老字號拍賣網站，C2C交易平台</p>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources">
+            <div class="section-header">
+                <h2>資源網站</h2>
+                <div class="links-grid">
+                    <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Unsplash</h3>
+                            <p>免費高質量圖片下載，可商用的攝影作品</p>
+                        </article>
+                    </a>
+                    <a href="https://free-images.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Free Images</h3>
+                            <p>免費圖片資源，提供多種類型的圖片素材</p>
+                        </article>
+                    </a>
+                    <a href="https://icons8.com/icons" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Icons8</h3>
+                            <p>免費圖片資源，提供多種風格的icon下載</p>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools">
+            <div class="section-header">
+                <h2>軟體工具</h2>
+                <div class="links-grid">
+                    <a href="https://www.videosoftdev.com/free-video-editor/download" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>VSDC</h3>
+                            <p>免費影片編輯器，功能豐富易上手</p>
+                        </article>
+                    </a>
+                    <a href="https://inkscape.org/zh-hant" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Inkscape</h3>
+                            <p>免費開源的向量圖形編輯軟體</p>
+                        </article>
+                    </a>
+                    <a href="https://www.cpuid.com/softwares/cpu-z.html" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>CPU-Z</h3>
+                            <p>電腦硬體檢測工具，查看統配置</p>
+                        </article>
+                    </a>
+                    <a href="https://www.hwinfo.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>HWinfo</h3>
+                            <p>系統硬體資訊檢測和監控工具</p>
+                        </article>
+                    </a>
+                    <a href="https://www.7-zip.org" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>7-Zip</h3>
+                            <p>免費開源的檔案壓縮工具</p>
+                        </article>
+                    </a>
+                    <a href="https://potplayer.daum.net" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>Potplayer</h3>
+                            <p>功能強大的多媒體播放器</p>
+                        </article>
+                    </a>
+                    <a href="https://www.videolan.org" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <article>
+                            <h3>VLC Player</h3>
+                            <p>開源跨平台的體播放器</p>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+    </footer>
+    <script>
+        const searchBox = document.querySelector('.search-box');
+        const linkCards = document.querySelectorAll('.link-card');
+
+        searchBox.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            linkCards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(searchTerm) ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
