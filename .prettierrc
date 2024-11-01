@@ -1,0 +1,35 @@
+{
+  "printWidth": 100,        // Line length where Prettier will try to wrap
+  "tabWidth": 2,           // Number of spaces per indentation
+  "useTabs": false,        // Use spaces instead of tabs
+  "semi": true,            // Add semicolons at the end
+  "singleQuote": true,     // Use single quotes for JS
+  "quoteProps": "as-needed", // Only quote properties when needed
+
+  "jsxSingleQuote": false,    // Use double quotes in JSX
+  "trailingComma": "es5",     // Add trailing commas where valid in ES5
+  "bracketSpacing": true,     // Spaces between brackets in object literals
+  "bracketSameLine": false,   // Put > of JSX elements on the next line
+  "arrowParens": "always",    // Always include parens around arrow function params
+
+  "htmlWhitespaceSensitivity": "css",  // Respect CSS display property
+  "vueIndentScriptAndStyle": true,     // Indent script and style tags in Vue
+  "singleAttributePerLine": false,     // Multiple attributes on same line if possible
+
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "printWidth": 120,      // Longer line length for HTML
+        "singleQuote": false    // Double quotes for HTML attributes
+      }
+    },
+    {
+      "files": ["*.css", "*.scss"],
+      "options": {
+        "printWidth": 100,
+        "singleQuote": false    // Double quotes for CSS
+      }
+    }
+  ]
+}
