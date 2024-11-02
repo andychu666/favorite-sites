@@ -24,20 +24,14 @@
         padding: 2rem; /* Spacing around nav content */
       }
 
-      main {
-        padding: 6rem calc(2rem + 2vw); /* Fixed vertical, flexible horizontal */
-        display: flex;
-        flex-wrap: wrap;
-        row-gap: 8.5rem;
-        column-gap: var(--column-gap);
-        justify-content: center;
-        max-width: 1600px;
-        margin: 0 auto;
-        margin-top: 2rem; /* Add space between nav and main */
-      }
+        main {
+            padding: 6.5rem;       /* Large padding around main content */
+            display: flex;         /* Flex container */
+            flex-wrap: wrap;       /* Allows items to wrap to next line */
+            row-gap: 8.5rem;
+            column-gap: 1.7rem;
+        }
 
-      /* Desktop view (768px and above) 4 columns */
-      @media (min-width: 768px) {
         section {
           flex: 1 1 calc(25% - (var(--column-gap) * 3 / 4));
           min-width: 143px;
@@ -67,26 +61,6 @@
         background-color: var(--card-bg);
         border-radius: 8px;
         position: relative;
-      }
-
-      section::before {
-        content: "";
-        position: absolute;
-        top: -80px; /* Adjust this value to control spacing */
-        left: 0;
-        width: 100%;
-        height: 70px; /* Adjust height as needed */
-        outline: 2px dashed rgba(0, 0, 0, 0.1);
-        background-color: rgba(0, 0, 0, 0.03);
-        box-sizing: border-box;
-        border-radius: 8px;
-        outline: 2px dashed rgba(0, 0, 0, 0.1);
-        background-color: rgba(0, 0, 0, 0.03);
-        box-sizing: border-box;
-        border-radius: 8px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
       }
 
       .section-header {
@@ -137,7 +111,9 @@
       }
 
       article:hover {
-        transform: translateY(-2px); /* Moves the element up by 2 pixels when hovered */
+        transform: translateY(
+          -2px
+        ); /* Moves the element up by 2 pixels when hovered */
         /*box-shadow: var(--shadow);*/ /* Applies the shadow defined in :root */
       }
 
@@ -225,56 +201,6 @@
           max-height: unset;
         }
       }
-      /* Specific background images for each section */
-      /* You can use icons from sources like:
-        Icons8 (https://icons8.com)
-        Flaticon (https://www.flaticon.com)
-        Font Awesome (https://fontawesome.com)
-        Material Icons (https://material.io/resources/icons)
-        Remember to either download the icons or use proper attribution if required by the source. */
-      /* #manga::before {
-            background-image: url('path/to/manga-icon.png');
-        }
-
-        #anime::before {
-            background-image: url('path/to/anime-icon.png');
-        }
-
-        #portal::before {
-            background-image: url('path/to/portal-icon.png');
-        }
-
-        #social::before {
-            background-image: url('path/to/social-icon.png');
-        }
-
-        #games::before {
-            background-image: url('path/to/games-icon.png');
-        }
-
-        #google::before {
-            background-image: url('path/to/google-icon.png');
-        }
-
-        #us-stocks::before {
-            background-image: url('path/to/stocks-icon.png');
-        }
-
-        #tw-stocks::before {
-            background-image: url('path/to/tw-stocks-icon.png');
-        }
-
-        #shopping::before {
-            background-image: url('path/to/shopping-icon.png');
-        }
-
-        #resources::before {
-            background-image: url('path/to/resources-icon.png');
-        }
-
-        #tools::before {
-            background-image: url('path/to/tools-icon.png');
-        } */
     </style>
   </head>
   <body>
@@ -366,7 +292,7 @@
             </article>
 
             <article>
-              <a href="https://gimy.app" target="_blank" rel="noopener noreferrer" class="link-card"
+              <a href="https://gimy.ai" target="_blank" rel="noopener noreferrer" class="link-card"
                 >Gimy劇迷</a
               >
               <p>提供動畫和劇的線上觀看平台</p>
@@ -728,7 +654,27 @@
               >
               <p>台灣熱門購物平台，提供多元商品和優惠</p>
             </article>
+            <article>
+              <a
+                href="https://shopee.tw"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-card"
+                >蝦皮</a
+              >
+              <p>台灣熱門購物平台，提供多元商品和優惠</p>
+            </article>
 
+            <article>
+              <a
+                href="https://shopping.pchome.com.tw"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-card"
+                >PChome</a
+              >
+              <p>台灣知名電商，24小時快速到貨服務</p>
+            </article>
             <article>
               <a
                 href="https://shopping.pchome.com.tw"
@@ -881,25 +827,14 @@
     <button id="return-to-top" title="Return to top">↑</button>
     <footer></footer>
     <script>
-      const returnToTop = document.getElementById("return-to-top");
+      const searchBox = document.querySelector(".search-box");
+      const linkCards = document.querySelectorAll(".link-card");
 
-      // Show button when user scrolls near the bottom
-      window.addEventListener("scroll", () => {
-        // Calculate how close to bottom (in pixels) to show button
-        const scrollThreshold = document.documentElement.scrollHeight - window.innerHeight - 100;
-
-        if (window.scrollY > scrollThreshold) {
-          returnToTop.classList.add("show");
-        } else {
-          returnToTop.classList.remove("show");
-        }
-      });
-
-      // Smooth scroll to top when button is clicked
-      returnToTop.addEventListener("click", () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
+      searchBox.addEventListener("input", (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        linkCards.forEach((card) => {
+          const text = card.textContent.toLowerCase();
+          card.style.display = text.includes(searchTerm) ? "block" : "none";
         });
       });
     </script>
